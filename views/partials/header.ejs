@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Fashi Template">
+    <meta name="keywords" content="Fashi, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fashi | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  </head>
+  <body>
+
+
+    <header class="header-section">
+
+      <div class="container">
+          <div class="inner-header">
+              <div class="row">
+                  <div class="col-lg-2 col-md-2">
+                      <div class="logo">
+                          <a href="/">
+                              <img src="img/logo.png" alt="">
+                          </a>
+                      </div>
+                  </div>
+                  <div class="col-lg-7 col-md-7">
+                      <div class="advanced-search">
+                          <button type="button" class="category-btn">All Categories</button>
+                          <div class="input-group">
+                              <input type="text" placeholder="What do you need?">
+                              <button type="button"><i class="ti-search"></i></button>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-3 text-right col-md-3">
+                      <ul class="nav-right">
+                          <li class="cart-icon">
+                              <a href="/cart">
+                                  <i class="icon_bag_alt"></i>
+                                  <% if(session.cart){ %>
+                                  <span>
+                                  <%= session.cart.totalQty %></span>
+                                  <% } %>
+                              </a>
+                          </li>
+                          <% if(session.cart){ %>
+                            <li class="cart-price">
+                            $<%= session.cart.totalPrice %>.00</li>
+                            <% } %>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="nav-item">
+          <div class="container">
+              <nav class="nav-menu mobile-menu">
+                  <ul>
+                      <li class="active"><a href="/">Home</a></li>
+                      <li><a href="/shop">Shop</a></li>
+                      <li><a href="/cart">Cart</a></li>
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-users"></i>
+                            <% if(!currentUser)
+                            {%> User <% } else{ %>
+                            <%= currentUser.username %>
+                            <% } %>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <% if(!currentUser){ %>
+                              <a class="dropdown-item" href="/user/signin" style="color:black;"><i class="fa fa-user"></i>Login</a>
+                              <a class="dropdown-item" href="/user/signup"  style="color:black;"><i class="fa fa-user-plus"></i>Sign Up</a>
+                            <% } else{ %>
+                              <a href="/user/profile" class="dropdown-item"  style="color:black;"><i class="fa fa-cog"></i>Profile</a>
+                              <a class="dropdown-item" href="/user/logout"  style="color:black;"><i class="fa fa-sign-out"></i>Logout</a>
+                            <% } %>
+                          </div>
+                        </li>
+                  </ul>
+              </nav>
+              <div id="mobile-menu-wrap"></div>
+          </div>
+      </div>
+  </header>

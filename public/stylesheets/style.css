@@ -1,0 +1,48 @@
+.nav-item{
+    margin-right: 7px;
+}
+
+.fa-shopping-cart{
+    margin-right: 3px;
+}
+
+.fa-users{
+    margin-right: 2px;
+}
+
+#products{
+    position: relative;
+    margin-top: 40px;
+}
+
+.thumbnail img{
+    max-height: 150px;
+    width: 100%;
+}
+
+.thumbnail{
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.price{
+    font-weight:bold;
+    font-size: 16px;
+    margin-left: 6px;
+    margin-top: 6px;
+}
+
+.description{
+    color: #7f7f7f;
+}
+.offer{
+    color: green;
+}
+
+.clearfix{
+    padding: 0 4px 4px 4px;
+}
+#flash{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
