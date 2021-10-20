@@ -1,16 +1,31 @@
-<h3>Shopping Cart made by using NodeJS/ ExpressJS/ MondoDB</h3>
-<p>Expreince like:</p>
-<ul>
-    <li>User Authentication</li>
-    <li>User Authorization</li>
-    <li>Bootstrap Carousel</li>
-    <li>Add to Cart Logic</li>
-</ul>
-<hr>
-<p>To be implemented:</p>
-<ul>
-    <li>Cart Views</li>
-    <li>UI changes</li>
-</ul>
+## Shopping Cart made by using NodeJS + ExpressJS + MongoDB
 
-<p>Run it on localhost:3000 and make sure your MongoDB server is running.</p>
+### Features
+
+Express
+
+RestApi
+
+MongoDB
+
+### Requirements
+
+[Nodejs and npm](https://nodejs.org/en/)
+
+[Github](https://github.com)
+
+[Ejs](https://ejs.co/)
+
+
+
+### Installation
+
+`git clone git@github.com:dinhlong1/nodejs-express-ejs-mongodb.git`
+
+`cd nodejs-express-ejs-mongodb`
+
+`npm install`
+
+`start MongoDB`
+
+`npm start`

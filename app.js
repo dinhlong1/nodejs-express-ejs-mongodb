@@ -52,9 +52,9 @@ app.use(function(req, res, next){
 app.get("/", function(req, res){
     res.render("index"); 
  });
-app.get("/blog", function(req, res){
-    res.render("blog"); 
-});
+
+
+
 app.get("/shop", function(req, res,next){
     Product.find({}, function(err, products){
         if(err){
